@@ -153,6 +153,29 @@ export default function DiretoriaDashboard() {
   const semaforoConfig = { verde: 'bg-emerald-500', amarelo: 'bg-amber-400', vermelho: 'bg-red-500' };
   const rankingColors = ['#10b981', '#3b82f6', '#f59e0b', '#8b5cf6', '#ef4444', '#ec4899'];
 
+  if (!profile?.empresa_id) {
+    return (
+      <div className="container mx-auto p-6">
+        <Card className="bg-destructive/10 border-destructive/20 shadow-none">
+          <CardContent className="p-10 text-center space-y-4">
+            <div className="mx-auto w-12 h-12 rounded-full bg-destructive/20 flex items-center justify-center">
+              <AlertTriangle className="h-6 w-6 text-destructive" />
+            </div>
+            <h2 className="text-xl font-bold text-destructive">Diretoria - Empresa não Vinculada</h2>
+            <p className="text-muted-foreground max-w-md mx-auto">
+              Seu perfil não possui um `empresa_id` associado.
+              Isso impede a visualização dos dados consolidados da diretoria.
+            </p>
+            <div className="bg-muted p-4 rounded-lg text-left text-xs font-mono space-y-1 inline-block">
+              <p>User ID: {profile?.user_id || 'Não identificado'}</p>
+              <p>Empresa ID: {profile?.empresa_id || 'Não vinculado'}</p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">

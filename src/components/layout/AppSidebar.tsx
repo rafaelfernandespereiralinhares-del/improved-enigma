@@ -97,75 +97,102 @@ export default function AppSidebar() {
         );
     }
 
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <aside
-            className={cn(
-                'flex h-screen flex-col bg-sidebar text-sidebar-foreground transition-all duration-300',
-                collapsed ? 'w-16' : 'w-64'
+        <>
+            {/* Mobile Toggle */}
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg md:hidden"
+            >
+                <Smartphone className="h-6 w-6" />
+            </button>
+
+            {/* Overlay */}
+            {isOpen && (
+                <div
+                    className="fixed inset-0 z-40 bg-black/50 md:hidden"
+                    onClick={() => setIsOpen(false)}
+                />
             )}
-        >
-            {/* Logo */}
-            <div className="flex h-16 items-center justify-between border-b border-sidebar-border px-4">
-                {!collapsed && (
-                    <div className="flex items-center gap-2">
-                        <Store className="h-6 w-6 text-sidebar-primary" />
-                        <span className="font-display text-lg font-bold text-sidebar-primary">NEXUS</span>
-                    </div>
-                )}
-                <button
-                    onClick={() => setCollapsed(!collapsed)}
-                    className="rounded-md p-1.5 text-sidebar-foreground/60 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                >
-                    <ChevronLeft className={cn('h-4 w-4 transition-transform', collapsed && 'rotate-180')} />
-                </button>
-            </div>
 
-            {/* Navigation */}
-            <nav className="flex-1 space-y-1 overflow-y-auto p-3">
-                {navItems.map(item => {
-                    const active = location.pathname === item.path;
-                    return (
-                        <button
-                            key={item.path}
-                            onClick={() => navigate(item.path)}
-                            className={cn(
-                                'flex w-full items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors',
-                                active
-                                    ? 'bg-sidebar-accent text-sidebar-accent-foreground'
-                                    : 'text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-sidebar-accent-foreground'
-                            )}
-                        >
-                            <item.icon className="h-4 w-4 shrink-0" />
-                            {!collapsed && <span>{item.label}</span>}
-                        </button>
-                    );
-                })}
-            </nav>
-
-            {/* User info + logout */}
-            <div className="border-t border-sidebar-border p-3">
-                {!collapsed && (
-                    <div className="mb-2 px-3">
-                        <p className="text-xs font-medium text-sidebar-foreground/90 truncate">{profile?.nome}</p>
-                        <p className="text-xs text-sidebar-foreground/50 truncate">
-                            {primaryRole === 'ADMIN' && 'Administrador'}
-                            {primaryRole === 'LOJA' && 'Loja'}
-                            {primaryRole === 'FINANCEIRO' && 'Financeiro'}
-                            {primaryRole === 'DIRETORIA' && 'Diretoria'}
-                            {!['ADMIN', 'LOJA', 'FINANCEIRO', 'DIRETORIA'].includes(primaryRole || '') && primaryRole}
-                        </p>
-                    </div>
+            <aside
+                className={cn(
+                    'fixed inset-y-0 left-0 z-40 flex flex-col bg-sidebar text-sidebar-foreground transition-all duration-300 md:relative',
+                    collapsed ? 'w-16' : 'w-64',
+                    !isOpen && '-translate-x-full md:translate-x-0'
                 )}
-                <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => { signOut(); navigate('/login'); }}
-                    className="w-full justify-start gap-2 text-sidebar-foreground/60 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                >
-                    <LogOut className="h-4 w-4" />
-                    {!collapsed && 'Sair'}
-                </Button>
-            </div>
-        </aside>
+            >
+                {/* Logo */}
+                <div className="flex h-16 items-center justify-between border-b border-sidebar-border px-4">
+                    {(!collapsed || isOpen) && (
+                        <div className="flex items-center gap-2">
+                            <Store className="h-6 w-6 text-sidebar-primary" />
+                            <span className="font-display text-lg font-bold text-sidebar-primary">NEXUS</span>
+                        </div>
+                    )}
+                    <button
+                        onClick={() => setCollapsed(!collapsed)}
+                        className="hidden rounded-md p-1.5 text-sidebar-foreground/60 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground md:block"
+                    >
+                        <ChevronLeft className={cn('h-4 w-4 transition-transform', collapsed && 'rotate-180')} />
+                    </button>
+                    <button
+                        onClick={() => setIsOpen(false)}
+                        className="rounded-md p-1.5 text-sidebar-foreground/60 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground md:hidden"
+                    >
+                        <ChevronLeft className="h-4 w-4" />
+                    </button>
+                </div>
+
+                {/* Navigation */}
+                <nav className="flex-1 space-y-1 overflow-y-auto p-3">
+                    {navItems.map(item => {
+                        const active = location.pathname === item.path;
+                        return (
+                            <button
+                                key={item.path}
+                                onClick={() => { navigate(item.path); setIsOpen(false); }}
+                                className={cn(
+                                    'flex w-full items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors',
+                                    active
+                                        ? 'bg-sidebar-accent text-sidebar-accent-foreground'
+                                        : 'text-sidebar-foreground/70 hover:bg-sidebar-accent/50 hover:text-sidebar-accent-foreground'
+                                )}
+                            >
+                                <item.icon className="h-4 w-4 shrink-0" />
+                                {(!collapsed || isOpen) && <span>{item.label}</span>}
+                            </button>
+                        );
+                    })}
+                </nav>
+
+                {/* User info + logout */}
+                <div className="border-t border-sidebar-border p-3">
+                    {!collapsed && (
+                        <div className="mb-2 px-3">
+                            <p className="text-xs font-medium text-sidebar-foreground/90 truncate">{profile?.nome}</p>
+                            <p className="text-xs text-sidebar-foreground/50 truncate">
+                                {primaryRole === 'ADMIN' && 'Administrador'}
+                                {primaryRole === 'LOJA' && 'Loja'}
+                                {primaryRole === 'FINANCEIRO' && 'Financeiro'}
+                                {primaryRole === 'DIRETORIA' && 'Diretoria'}
+                                {!['ADMIN', 'LOJA', 'FINANCEIRO', 'DIRETORIA'].includes(primaryRole || '') && primaryRole}
+                            </p>
+                        </div>
+                    )}
+                    <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => { signOut(); navigate('/login'); }}
+                        className="w-full justify-start gap-2 text-sidebar-foreground/60 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                    >
+                        <LogOut className="h-4 w-4" />
+                        {!collapsed && 'Sair'}
+                    </Button>
+                </div>
+            </aside>
+        </>
     );
 }

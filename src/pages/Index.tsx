@@ -7,14 +7,23 @@ export default function Index() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        console.log('Index: Auth state changes', { session: !!session, loading, primaryRole });
         if (loading) return;
-        if (!session) { navigate('/login', { replace: true }); return; }
+        if (!session) {
+            console.log('Index: No session found, redirecting to login');
+            navigate('/login', { replace: true });
+            return;
+        }
+
+        console.log('Index: User logged in, redirecting based on role:', primaryRole);
         switch (primaryRole) {
             case 'ADMIN': navigate('/admin/dashboard', { replace: true }); break;
             case 'DIRETORIA': navigate('/diretoria/dashboard', { replace: true }); break;
             case 'FINANCEIRO': navigate('/financeiro/conciliacao', { replace: true }); break;
             case 'LOJA': navigate('/loja/dashboard', { replace: true }); break;
-            default: navigate('/login', { replace: true });
+            default:
+                console.warn('Index: No recognized role, fallback to login');
+                navigate('/login', { replace: true });
         }
     }, [loading, session, primaryRole, navigate]);
 
