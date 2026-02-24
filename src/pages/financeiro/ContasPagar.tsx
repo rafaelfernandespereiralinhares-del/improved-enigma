@@ -51,8 +51,19 @@ export default function ContasPagar() {
 
   const handleDelete = async (id: string) => {
     if (!confirm('Tem certeza que deseja excluir esta conta?')) return;
+
+    // Optimistic update
+    const previousContas = [...contas];
+    setContas(contas.filter(c => c.id !== id));
+
     const { error } = await supabase.from('contas_pagar').delete().eq('id', id);
-    if (error) { toast({ title: 'Erro ao excluir', description: error.message, variant: 'destructive' }); return; }
+
+    if (error) {
+      setContas(previousContas); // Rollback
+      toast({ title: 'Erro ao excluir', description: error.message, variant: 'destructive' });
+      return;
+    }
+
     toast({ title: 'Conta excluída com sucesso!' });
     fetchContas();
   };

@@ -7,13 +7,11 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   LineChart, Line, Cell, Legend, PieChart, Pie, AreaChart, Area
 } from 'recharts';
-import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 type ChartType = 'bar' | 'line';
 
 const fmtShort = (v: number) => v >= 1000 ? `R$ ${(v / 1000).toFixed(1)}k` : `R$ ${v.toFixed(0)}`;
-const fmt = (v: number) => `R$ ${Number(v).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
 
 function CustomTooltip({ active, payload, label }: any) {
   if (!active || !payload?.length) return null;
@@ -43,7 +41,11 @@ export default function DiretoriaDashboard() {
   const [filterMes, setFilterMes] = useState(new Date().toISOString().slice(0, 7));
 
   const fetchAll = useCallback(async () => {
-    if (!profile?.empresa_id) return;
+    console.log('DiretoriaDashboard: Fetching for profile:', profile);
+    if (!profile?.empresa_id) {
+      console.warn('DiretoriaDashboard: Empresa ID missing');
+      return;
+    }
     const empresaId = profile.empresa_id;
 
     const { data: lojas } = await supabase.from('lojas').select('id, nome').eq('empresa_id', empresaId).eq('ativa', true);
@@ -71,22 +73,22 @@ export default function DiretoriaDashboard() {
 
     const { data: receber } = await supabase.from('contas_receber').select('valor, status').eq('empresa_id', empresaId);
 
-    const receberStatusMap: Record<string, number> = { ABERTO: 0, PAGO: 0, ATRASADO: 0, NEGOCIADO: 0 };
+    const receberStatusMap: Record<string, number> = { Pendente: 0, Recebido: 0, Atrasado: 0, Negociado: 0 };
     (receber || []).forEach(r => {
-      const st = r.status || 'ABERTO';
+      const st = r.status || 'Pendente';
       receberStatusMap[st] = (receberStatusMap[st] || 0) + (Number(r.valor) || 0);
     });
     setDistRecebimentos([
-      { name: 'Pago', value: receberStatusMap['PAGO'], color: '#10b981' },
-      { name: 'Aberto', value: receberStatusMap['ABERTO'], color: '#f59e0b' },
-      { name: 'Atrasado', value: receberStatusMap['ATRASADO'], color: '#ef4444' },
-      { name: 'Negociado', value: receberStatusMap['NEGOCIADO'], color: '#8b5cf6' },
+      { name: 'Pago', value: receberStatusMap['Recebido'], color: '#10b981' },
+      { name: 'Aberto', value: receberStatusMap['Pendente'], color: '#f59e0b' },
+      { name: 'Atrasado', value: receberStatusMap['Atrasado'], color: '#ef4444' },
+      { name: 'Negociado', value: receberStatusMap['Negociado'], color: '#8b5cf6' },
     ].filter(d => d.value > 0));
 
-    setInadimplencia(receberStatusMap['ATRASADO'] || 0);
+    setInadimplencia(receberStatusMap['Atrasado'] || 0);
 
     const { data: metas } = await supabase.from('metas').select('loja_id, meta_mensal').eq('empresa_id', empresaId).eq('mes', filterMes);
-    const { data: concDiv } = await supabase.from('conciliacoes').select('loja_id').eq('empresa_id', empresaId).eq('status', 'DIVERGENCIA' as any).gte('data', startDate).lte('data', endDate);
+    const { data: concDiv } = await supabase.from('conciliacoes').select('loja_id').eq('empresa_id', empresaId).eq('status', 'Divergente' as any).gte('data', startDate).lte('data', endDate);
     const divLojas = new Set((concDiv || []).map(c => c.loja_id));
 
     const semaforo = lojas.map(l => {
@@ -128,7 +130,6 @@ export default function DiretoriaDashboard() {
       const d = (f.data as string).slice(8, 10);
       diariaMap[d] = (diariaMap[d] || 0) + (Number(f.total_entradas) || 0);
     });
-    const [anoF, mesF] = filterMes.split('-');
     const diasNoMes = new Date(parseInt(anoF), parseInt(mesF), 0).getDate();
     const diariArr = [];
     let accDiario = 0;
