@@ -1,4 +1,5 @@
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -34,9 +35,9 @@ import DiretoriaDashboard from "./pages/diretoria/DiretoriaDashboard";
 import RelatorioIA from "./pages/diretoria/RelatorioIA";
 import PlanejamentoEstrategico from "./pages/diretoria/PlanejamentoEstrategico";
 
-import Funcionarios from "./pages/financeiro/Funcionarios";
-import CampanhasVendas from "./pages/financeiro/CampanhasVendas";
-import FolhaPagamento from "./pages/financeiro/FolhaPagamento";
+import Funcionarios from "./pages/rh/Funcionarios";
+import CampanhasVendas from "./pages/rh/CampanhasVendas";
+import FolhaPagamento from "./pages/rh/FolhaPagamento";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
+        <Sonner />
         <BrowserRouter>
           <AuthProvider>
             <Routes>

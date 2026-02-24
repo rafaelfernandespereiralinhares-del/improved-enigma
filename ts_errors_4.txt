@@ -1,0 +1,865 @@
+src/components/DataImportButton.tsx(17,29): error TS1005: ',' expected.
+src/components/DataImportButton.tsx(17,30): error TS1005: ',' expected.
+src/components/DataImportButton.tsx(22,25): error TS1005: ',' expected.
+src/components/DataImportButton.tsx(22,26): error TS1005: ',' expected.
+src/components/DataImportButton.tsx(31,32): error TS1005: ',' expected.
+src/components/DataImportButton.tsx(31,33): error TS1128: Declaration or statement expected.
+src/components/DataImportButton.tsx(35,9): error TS1128: Declaration or statement expected.
+src/components/DataImportButton.tsx(35,11): error TS1005: 'try' expected.
+src/components/DataImportButton.tsx(36,30): error TS1005: ',' expected.
+src/components/DataImportButton.tsx(36,31): error TS1128: Declaration or statement expected.
+src/components/DataImportButton.tsx(37,9): error TS1128: Declaration or statement expected.
+src/components/DataImportButton.tsx(38,5): error TS1128: Declaration or statement expected.
+src/components/DataImportButton.tsx(46,54): error TS1005: ',' expected.
+src/components/DataImportButton.tsx(46,55): error TS1003: Identifier expected.
+src/components/DataImportButton.tsx(46,56): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/components/DataImportButton.tsx(51,14): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/DataImportButton.tsx(54,1): error TS1128: Declaration or statement expected.
+src/components/FileImport.tsx(22,48): error TS1005: ',' expected.
+src/components/FileImport.tsx(22,49): error TS1005: ',' expected.
+src/components/FileImport.tsx(24,5): error TS1128: Declaration or statement expected.
+src/components/FileImport.tsx(24,6): error TS1128: Declaration or statement expected.
+src/components/FileImport.tsx(89,1): error TS1128: Declaration or statement expected.
+src/components/layout/AppSidebar.tsx(119,105): error TS1005: ',' expected.
+src/components/layout/AppSidebar.tsx(119,106): error TS1003: Identifier expected.
+src/components/layout/AppSidebar.tsx(119,107): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/components/layout/AppSidebar.tsx(119,110): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/layout/AppSidebar.tsx(162,46): error TS1135: Argument expression expected.
+src/components/layout/AppSidebar.tsx(162,47): error TS1005: '}' expected.
+src/components/layout/AppSidebar.tsx(162,70): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/components/layout/AppSidebar.tsx(162,71): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/components/layout/AppSidebar.tsx(164,17): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/layout/AppSidebar.tsx(167,19): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/components/layout/AppSidebar.tsx(168,15): error TS17002: Expected corresponding JSX closing tag for 'aside'.
+src/components/layout/AppSidebar.tsx(169,9): error TS1005: ')' expected.
+src/components/layout/AppSidebar.tsx(170,5): error TS1109: Expression expected.
+src/components/ui/month-year-picker.tsx(39,9): error TS2657: JSX expressions must have one parent element.
+src/components/ui/month-year-picker.tsx(46,21): error TS1005: ',' expected.
+src/components/ui/month-year-picker.tsx(46,22): error TS1003: Identifier expected.
+src/components/ui/month-year-picker.tsx(46,23): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/components/ui/month-year-picker.tsx(47,17): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/ui/month-year-picker.tsx(50,19): error TS17002: Expected corresponding JSX closing tag for 'PopoverTrigger'.
+src/components/ui/month-year-picker.tsx(51,15): error TS17002: Expected corresponding JSX closing tag for 'Popover'.
+src/components/ui/month-year-picker.tsx(86,9): error TS1005: ')' expected.
+src/components/ui/month-year-picker.tsx(87,5): error TS1109: Expression expected.
+src/features/maintenance/components/MaintenanceForm.tsx(70,9): error TS2657: JSX expressions must have one parent element.
+src/features/maintenance/components/MaintenanceForm.tsx(115,121): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceForm.tsx(115,122): error TS1003: Identifier expected.
+src/features/maintenance/components/MaintenanceForm.tsx(115,123): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/components/MaintenanceForm.tsx(115,124): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/features/maintenance/components/MaintenanceForm.tsx(123,23): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/features/maintenance/components/MaintenanceForm.tsx(125,15): error TS17002: Expected corresponding JSX closing tag for 'form'.
+src/features/maintenance/components/MaintenanceForm.tsx(130,9): error TS1005: ')' expected.
+src/features/maintenance/components/MaintenanceForm.tsx(131,5): error TS1109: Expression expected.
+src/features/maintenance/components/MaintenanceList.tsx(60,79): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceList.tsx(60,80): error TS1128: Declaration or statement expected.
+src/features/maintenance/components/MaintenanceList.tsx(61,49): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/components/MaintenanceList.tsx(62,45): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/components/MaintenanceList.tsx(62,46): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/components/MaintenanceList.tsx(64,41): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/features/maintenance/components/MaintenanceList.tsx(66,43): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/features/maintenance/components/MaintenanceList.tsx(67,39): error TS17002: Expected corresponding JSX closing tag for 'TableCell'.
+src/features/maintenance/components/MaintenanceList.tsx(68,35): error TS17002: Expected corresponding JSX closing tag for 'TableRow'.
+src/features/maintenance/components/MaintenanceList.tsx(69,29): error TS1005: ')' expected.
+src/features/maintenance/components/MaintenanceList.tsx(69,31): error TS17002: Expected corresponding JSX closing tag for 'TableBody'.
+src/features/maintenance/components/MaintenanceList.tsx(70,27): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/components/MaintenanceList.tsx(74,23): error TS17002: Expected corresponding JSX closing tag for 'Table'.
+src/features/maintenance/components/MaintenanceList.tsx(75,19): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/features/maintenance/components/MaintenanceList.tsx(76,15): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/features/maintenance/components/MaintenanceList.tsx(78,94): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceList.tsx(78,95): error TS1003: Identifier expected.
+src/features/maintenance/components/MaintenanceList.tsx(78,96): error TS1003: Identifier expected.
+src/features/maintenance/components/MaintenanceList.tsx(78,97): error TS1109: Expression expected.
+src/features/maintenance/components/MaintenanceList.tsx(92,13): error TS1128: Declaration or statement expected.
+src/features/maintenance/components/MaintenanceList.tsx(93,9): error TS1109: Expression expected.
+src/features/maintenance/components/MaintenanceList.tsx(93,11): error TS1109: Expression expected.
+src/features/maintenance/components/MaintenanceList.tsx(94,5): error TS1109: Expression expected.
+src/features/maintenance/components/MaintenanceList.tsx(95,1): error TS1128: Declaration or statement expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(37,5): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(58,13): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(65,13): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(70,9): error TS2657: JSX expressions must have one parent element.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(93,147): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(108,163): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(115,121): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(115,122): error TS1003: Identifier expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(115,123): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(115,124): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(123,23): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(125,15): error TS17002: Expected corresponding JSX closing tag for 'form'.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(130,9): error TS1005: ')' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(131,5): error TS1109: Expression expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(15,92): error TS1005: ';' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(45,120): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(48,122): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(60,79): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(60,80): error TS1128: Declaration or statement expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(61,49): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(62,45): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(62,46): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(64,41): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(66,43): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(67,39): error TS17002: Expected corresponding JSX closing tag for 'TableCell'.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(68,35): error TS17002: Expected corresponding JSX closing tag for 'TableRow'.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(69,29): error TS1005: ')' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(69,31): error TS17002: Expected corresponding JSX closing tag for 'TableBody'.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(70,27): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(74,23): error TS17002: Expected corresponding JSX closing tag for 'Table'.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(75,19): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(76,15): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(78,94): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(78,95): error TS1003: Identifier expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(78,96): error TS1003: Identifier expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(78,97): error TS1109: Expression expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(92,13): error TS1128: Declaration or statement expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(93,9): error TS1109: Expression expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(93,11): error TS1109: Expression expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(94,5): error TS1109: Expression expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(95,1): error TS1128: Declaration or statement expected.
+src/features/maintenance/maintenance/MaintenancePage.tsx(50,120): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(35,14): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(35,15): error TS1472: 'catch' or 'finally' expected.
+src/hooks/useAuth.tsx(48,42): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(48,43): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(53,11): error TS1005: 'try' expected.
+src/hooks/useAuth.tsx(54,59): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(54,60): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(55,9): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(56,5): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(69,60): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(71,22): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(71,25): error TS1005: ';' expected.
+src/hooks/useAuth.tsx(72,19): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(73,32): error TS1359: Identifier expected. 'null' is a reserved word that cannot be used here.
+src/hooks/useAuth.tsx(73,36): error TS1138: Parameter declaration expected.
+src/hooks/useAuth.tsx(76,17): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(77,13): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(78,9): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(81,31): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(84,52): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(84,53): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(85,13): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(87,9): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(87,10): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(91,38): error TS1135: Argument expression expected.
+src/hooks/useAuth.tsx(91,39): error TS1005: ';' expected.
+src/hooks/useAuth.tsx(92,9): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(93,5): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(93,6): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(93,10): error TS1005: ';' expected.
+src/hooks/useAuth.tsx(147,37): error TS1135: Argument expression expected.
+src/hooks/useAuth.tsx(147,38): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(150,5): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(163,1): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(166,43): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(166,44): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(169,1): error TS1128: Declaration or statement expected.
+src/hooks/useExcelImport.ts(11,53): error TS1005: ',' expected.
+src/hooks/useExcelImport.ts(11,54): error TS1128: Declaration or statement expected.
+src/hooks/useExcelImport.ts(16,56): error TS1135: Argument expression expected.
+src/hooks/useExcelImport.ts(16,57): error TS1472: 'catch' or 'finally' expected.
+src/hooks/useExcelImport.ts(37,11): error TS1005: ',' expected.
+src/hooks/useExcelImport.ts(38,56): error TS1005: ',' expected.
+src/hooks/useExcelImport.ts(38,57): error TS1128: Declaration or statement expected.
+src/hooks/useExcelImport.ts(47,9): error TS1128: Declaration or statement expected.
+src/hooks/useExcelImport.ts(47,11): error TS1005: 'try' expected.
+src/hooks/useExcelImport.ts(48,31): error TS1005: ',' expected.
+src/hooks/useExcelImport.ts(48,32): error TS1128: Declaration or statement expected.
+src/hooks/useExcelImport.ts(49,9): error TS1128: Declaration or statement expected.
+src/hooks/useExcelImport.ts(50,5): error TS1128: Declaration or statement expected.
+src/hooks/useExcelImport.ts(56,1): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminDashboard.tsx(126,70): error TS1005: ',' expected.
+src/pages/admin/AdminDashboard.tsx(126,71): error TS1003: Identifier expected.
+src/pages/admin/AdminDashboard.tsx(126,72): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminDashboard.tsx(127,25): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/admin/AdminDashboard.tsx(132,27): error TS17002: Expected corresponding JSX closing tag for 'CardContent'.
+src/pages/admin/AdminDashboard.tsx(153,23): error TS17002: Expected corresponding JSX closing tag for 'Card'.
+src/pages/admin/AdminDashboard.tsx(154,19): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/admin/AdminDashboard.tsx(156,9): error TS1005: ')' expected.
+src/pages/admin/AdminDashboard.tsx(157,5): error TS1109: Expression expected.
+src/pages/admin/AdminEmpresas.tsx(59,28): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(59,29): error TS1472: 'catch' or 'finally' expected.
+src/pages/admin/AdminEmpresas.tsx(67,11): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(68,62): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(68,63): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(70,11): error TS1005: 'try' expected.
+src/pages/admin/AdminEmpresas.tsx(71,29): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(71,30): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(72,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(73,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(76,23): error TS1135: Argument expression expected.
+src/pages/admin/AdminEmpresas.tsx(77,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(77,6): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(77,10): error TS1005: ';' expected.
+src/pages/admin/AdminEmpresas.tsx(86,29): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(86,30): error TS1472: 'catch' or 'finally' expected.
+src/pages/admin/AdminEmpresas.tsx(97,11): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(98,59): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(98,60): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(100,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(100,11): error TS1005: 'try' expected.
+src/pages/admin/AdminEmpresas.tsx(101,30): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(101,31): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(102,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(103,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(117,52): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(117,53): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(119,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(123,52): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(123,53): error TS1472: 'catch' or 'finally' expected.
+src/pages/admin/AdminEmpresas.tsx(126,11): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(127,55): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(127,56): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(129,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(130,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminEmpresas.tsx(169,90): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(169,91): error TS1003: Identifier expected.
+src/pages/admin/AdminEmpresas.tsx(169,92): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminEmpresas.tsx(172,38): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/admin/AdminEmpresas.tsx(191,66): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(191,67): error TS1003: Identifier expected.
+src/pages/admin/AdminEmpresas.tsx(191,68): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminEmpresas.tsx(193,18): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/admin/AdminEmpresas.tsx(261,1): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(75,28): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(75,29): error TS1472: 'catch' or 'finally' expected.
+src/pages/admin/AdminLojas.tsx(95,11): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(96,59): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(96,60): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(98,11): error TS1005: 'try' expected.
+src/pages/admin/AdminLojas.tsx(99,29): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(99,30): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(100,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(101,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(104,19): error TS1135: Argument expression expected.
+src/pages/admin/AdminLojas.tsx(105,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(105,6): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(105,10): error TS1005: ';' expected.
+src/pages/admin/AdminLojas.tsx(113,49): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(113,50): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(135,56): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(135,57): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(137,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(137,11): error TS1005: 'try' expected.
+src/pages/admin/AdminLojas.tsx(138,30): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(138,31): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(139,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(140,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(154,52): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(154,53): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(156,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(160,49): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(160,50): error TS1472: 'catch' or 'finally' expected.
+src/pages/admin/AdminLojas.tsx(163,11): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(164,55): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(164,56): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(166,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(167,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminLojas.tsx(227,87): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(227,88): error TS1003: Identifier expected.
+src/pages/admin/AdminLojas.tsx(227,89): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminLojas.tsx(230,38): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/admin/AdminLojas.tsx(249,66): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(249,67): error TS1003: Identifier expected.
+src/pages/admin/AdminLojas.tsx(249,68): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminLojas.tsx(251,18): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/admin/AdminLojas.tsx(326,1): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(90,28): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(90,29): error TS1472: 'catch' or 'finally' expected.
+src/pages/admin/AdminUsuarios.tsx(102,11): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(103,59): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(103,60): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(105,11): error TS1005: 'try' expected.
+src/pages/admin/AdminUsuarios.tsx(106,29): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(106,30): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(107,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(108,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(111,19): error TS1135: Argument expression expected.
+src/pages/admin/AdminUsuarios.tsx(112,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(112,6): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(112,10): error TS1005: ';' expected.
+src/pages/admin/AdminUsuarios.tsx(121,29): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(121,30): error TS1472: 'catch' or 'finally' expected.
+src/pages/admin/AdminUsuarios.tsx(133,11): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(134,58): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(134,59): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(136,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(136,11): error TS1005: 'try' expected.
+src/pages/admin/AdminUsuarios.tsx(137,30): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(137,31): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(138,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(139,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(152,52): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(152,53): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(154,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(158,95): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(158,96): error TS1472: 'catch' or 'finally' expected.
+src/pages/admin/AdminUsuarios.tsx(162,11): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(163,55): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(163,56): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(165,9): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(166,5): error TS1128: Declaration or statement expected.
+src/pages/admin/AdminUsuarios.tsx(176,9): error TS2657: JSX expressions must have one parent element.
+src/pages/admin/AdminUsuarios.tsx(273,95): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(273,96): error TS1003: Identifier expected.
+src/pages/admin/AdminUsuarios.tsx(273,97): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminUsuarios.tsx(273,98): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/admin/AdminUsuarios.tsx(273,109): error TS17002: Expected corresponding JSX closing tag for 'DialogFooter'.
+src/pages/admin/AdminUsuarios.tsx(277,31): error TS17002: Expected corresponding JSX closing tag for 'DialogContent'.
+src/pages/admin/AdminUsuarios.tsx(278,27): error TS17002: Expected corresponding JSX closing tag for 'Dialog'.
+src/pages/admin/AdminUsuarios.tsx(279,23): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/admin/AdminUsuarios.tsx(357,114): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(357,115): error TS1003: Identifier expected.
+src/pages/admin/AdminUsuarios.tsx(357,116): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminUsuarios.tsx(357,117): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/admin/AdminUsuarios.tsx(363,51): error TS17002: Expected corresponding JSX closing tag for 'DropdownMenuContent'.
+src/pages/admin/AdminUsuarios.tsx(364,47): error TS17002: Expected corresponding JSX closing tag for 'DropdownMenu'.
+src/pages/admin/AdminUsuarios.tsx(365,43): error TS17002: Expected corresponding JSX closing tag for 'TableCell'.
+src/pages/admin/AdminUsuarios.tsx(366,39): error TS17002: Expected corresponding JSX closing tag for 'TableRow'.
+src/pages/admin/AdminUsuarios.tsx(367,33): error TS1005: ')' expected.
+src/pages/admin/AdminUsuarios.tsx(367,35): error TS17002: Expected corresponding JSX closing tag for 'TableBody'.
+src/pages/admin/AdminUsuarios.tsx(369,25): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminUsuarios.tsx(369,27): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/admin/AdminUsuarios.tsx(377,23): error TS17002: Expected corresponding JSX closing tag for 'Table'.
+src/pages/admin/AdminUsuarios.tsx(378,19): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/admin/AdminUsuarios.tsx(379,13): error TS1005: ')' expected.
+src/pages/admin/AdminUsuarios.tsx(380,9): error TS1109: Expression expected.
+src/pages/admin/AdminUsuarios.tsx(381,5): error TS1109: Expression expected.
+src/pages/admin/AdminUsuarios.tsx(382,1): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(46,28): error TS1135: Argument expression expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(47,6): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(47,22): error TS1005: ';' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(83,94): error TS1005: ',' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(84,22): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(99,69): error TS1005: ',' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(99,70): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(100,23): error TS1472: 'catch' or 'finally' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(105,18): error TS1005: ',' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(116,13): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(118,9): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(118,11): error TS1005: 'try' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(119,63): error TS1005: ',' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(119,64): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(121,9): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(122,5): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(155,96): error TS1005: ',' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(155,98): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/diretoria/DiretoriaDashboard.tsx(246,1): error TS1128: Declaration or statement expected.
+src/pages/diretoria/RelatorioIA.tsx(28,27): error TS1005: ',' expected.
+src/pages/diretoria/RelatorioIA.tsx(28,28): error TS1005: ',' expected.
+src/pages/diretoria/RelatorioIA.tsx(88,25): error TS1005: ')' expected.
+src/pages/diretoria/RelatorioIA.tsx(88,27): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/diretoria/RelatorioIA.tsx(182,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Auditoria.tsx(46,28): error TS1005: ',' expected.
+src/pages/financeiro/Auditoria.tsx(46,29): error TS1472: 'catch' or 'finally' expected.
+src/pages/financeiro/Auditoria.tsx(55,11): error TS1005: ',' expected.
+src/pages/financeiro/Auditoria.tsx(56,64): error TS1005: ',' expected.
+src/pages/financeiro/Auditoria.tsx(56,65): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Auditoria.tsx(58,11): error TS1005: 'try' expected.
+src/pages/financeiro/Auditoria.tsx(59,29): error TS1005: ',' expected.
+src/pages/financeiro/Auditoria.tsx(59,30): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Auditoria.tsx(60,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Auditoria.tsx(61,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Auditoria.tsx(64,26): error TS1135: Argument expression expected.
+src/pages/financeiro/Auditoria.tsx(65,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Auditoria.tsx(65,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Auditoria.tsx(65,19): error TS1005: ';' expected.
+src/pages/financeiro/Auditoria.tsx(144,100): error TS1005: ',' expected.
+src/pages/financeiro/Auditoria.tsx(144,102): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/Auditoria.tsx(172,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(40,28): error TS1005: ',' expected.
+src/pages/financeiro/CampanhasVendas.tsx(40,29): error TS1472: 'catch' or 'finally' expected.
+src/pages/financeiro/CampanhasVendas.tsx(49,11): error TS1005: ',' expected.
+src/pages/financeiro/CampanhasVendas.tsx(50,63): error TS1005: ',' expected.
+src/pages/financeiro/CampanhasVendas.tsx(50,64): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(52,11): error TS1005: 'try' expected.
+src/pages/financeiro/CampanhasVendas.tsx(53,29): error TS1005: ',' expected.
+src/pages/financeiro/CampanhasVendas.tsx(53,30): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(54,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(55,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(58,24): error TS1135: Argument expression expected.
+src/pages/financeiro/CampanhasVendas.tsx(59,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(59,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(59,19): error TS1005: ';' expected.
+src/pages/financeiro/CampanhasVendas.tsx(67,55): error TS1005: ',' expected.
+src/pages/financeiro/CampanhasVendas.tsx(67,56): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(70,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/CampanhasVendas.tsx(146,110): error TS1005: ',' expected.
+src/pages/financeiro/CampanhasVendas.tsx(146,112): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/CampanhasVendas.tsx(171,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Conciliacao.tsx(18,27): error TS1135: Argument expression expected.
+src/pages/financeiro/Conciliacao.tsx(19,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Conciliacao.tsx(19,14): error TS1005: ';' expected.
+src/pages/financeiro/Conciliacao.tsx(42,52): error TS1005: ',' expected.
+src/pages/financeiro/Conciliacao.tsx(42,53): error TS1005: ',' expected.
+src/pages/financeiro/Conciliacao.tsx(44,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Conciliacao.tsx(68,138): error TS1135: Argument expression expected.
+src/pages/financeiro/Conciliacao.tsx(68,140): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/Conciliacao.tsx(147,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(43,23): error TS1135: Argument expression expected.
+src/pages/financeiro/ContasPagar.tsx(43,24): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(45,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(45,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(45,25): error TS1005: ';' expected.
+src/pages/financeiro/ContasPagar.tsx(61,32): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(61,33): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(63,11): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(64,20): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(64,35): error TS1005: ')' expected.
+src/pages/financeiro/ContasPagar.tsx(64,36): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(65,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(67,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(71,70): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(71,71): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(75,82): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(75,83): error TS1472: 'catch' or 'finally' expected.
+src/pages/financeiro/ContasPagar.tsx(78,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(78,11): error TS1005: 'try' expected.
+src/pages/financeiro/ContasPagar.tsx(79,46): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(79,47): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(80,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(81,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(89,55): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(89,56): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(110,32): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(110,33): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(112,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(113,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(122,43): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(122,44): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(124,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(173,49): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(173,50): error TS1003: Identifier expected.
+src/pages/financeiro/ContasPagar.tsx(173,51): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/ContasPagar.tsx(174,45): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/financeiro/ContasPagar.tsx(177,47): error TS17002: Expected corresponding JSX closing tag for 'PopoverTrigger'.
+src/pages/financeiro/ContasPagar.tsx(178,43): error TS17002: Expected corresponding JSX closing tag for 'Popover'.
+src/pages/financeiro/ContasPagar.tsx(187,39): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/financeiro/ContasPagar.tsx(205,31): error TS17002: Expected corresponding JSX closing tag for 'DialogContent'.
+src/pages/financeiro/ContasPagar.tsx(207,94): error TS1005: ',' expected.
+src/pages/financeiro/ContasPagar.tsx(207,95): error TS1003: Identifier expected.
+src/pages/financeiro/ContasPagar.tsx(207,96): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/ContasPagar.tsx(207,97): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/financeiro/ContasPagar.tsx(207,108): error TS17002: Expected corresponding JSX closing tag for 'DialogFooter'.
+src/pages/financeiro/ContasPagar.tsx(209,31): error TS17002: Expected corresponding JSX closing tag for 'Dialog'.
+src/pages/financeiro/ContasPagar.tsx(210,27): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/financeiro/ContasPagar.tsx(211,23): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/financeiro/ContasPagar.tsx(214,13): error TS1005: ')' expected.
+src/pages/financeiro/ContasPagar.tsx(219,13): error TS2657: JSX expressions must have one parent element.
+src/pages/financeiro/ContasPagar.tsx(295,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasPagar.tsx(296,5): error TS1109: Expression expected.
+src/pages/financeiro/ContasPagar.tsx(297,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(43,23): error TS1135: Argument expression expected.
+src/pages/financeiro/ContasReceber.tsx(43,24): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(45,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(45,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(45,25): error TS1005: ';' expected.
+src/pages/financeiro/ContasReceber.tsx(61,32): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(61,33): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(63,11): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(64,20): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(64,35): error TS1005: ')' expected.
+src/pages/financeiro/ContasReceber.tsx(64,36): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(65,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(67,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(71,67): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(71,68): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(75,84): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(75,85): error TS1472: 'catch' or 'finally' expected.
+src/pages/financeiro/ContasReceber.tsx(78,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(78,11): error TS1005: 'try' expected.
+src/pages/financeiro/ContasReceber.tsx(79,46): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(79,47): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(80,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(81,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(89,52): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(89,53): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(110,32): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(110,33): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(112,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(113,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(122,43): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(122,44): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(124,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(173,49): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(173,50): error TS1003: Identifier expected.
+src/pages/financeiro/ContasReceber.tsx(173,51): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/ContasReceber.tsx(174,45): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/financeiro/ContasReceber.tsx(177,47): error TS17002: Expected corresponding JSX closing tag for 'PopoverTrigger'.
+src/pages/financeiro/ContasReceber.tsx(178,43): error TS17002: Expected corresponding JSX closing tag for 'Popover'.
+src/pages/financeiro/ContasReceber.tsx(187,39): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/financeiro/ContasReceber.tsx(205,31): error TS17002: Expected corresponding JSX closing tag for 'DialogContent'.
+src/pages/financeiro/ContasReceber.tsx(207,94): error TS1005: ',' expected.
+src/pages/financeiro/ContasReceber.tsx(207,95): error TS1003: Identifier expected.
+src/pages/financeiro/ContasReceber.tsx(207,96): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/ContasReceber.tsx(207,97): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/financeiro/ContasReceber.tsx(207,108): error TS17002: Expected corresponding JSX closing tag for 'DialogFooter'.
+src/pages/financeiro/ContasReceber.tsx(209,31): error TS17002: Expected corresponding JSX closing tag for 'Dialog'.
+src/pages/financeiro/ContasReceber.tsx(210,27): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/financeiro/ContasReceber.tsx(211,23): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/financeiro/ContasReceber.tsx(214,13): error TS1005: ')' expected.
+src/pages/financeiro/ContasReceber.tsx(219,13): error TS2657: JSX expressions must have one parent element.
+src/pages/financeiro/ContasReceber.tsx(295,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/ContasReceber.tsx(296,5): error TS1109: Expression expected.
+src/pages/financeiro/ContasReceber.tsx(297,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(46,28): error TS1005: ',' expected.
+src/pages/financeiro/Funcionarios.tsx(46,29): error TS1472: 'catch' or 'finally' expected.
+src/pages/financeiro/Funcionarios.tsx(55,11): error TS1005: ',' expected.
+src/pages/financeiro/Funcionarios.tsx(56,66): error TS1005: ',' expected.
+src/pages/financeiro/Funcionarios.tsx(56,67): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(58,11): error TS1005: 'try' expected.
+src/pages/financeiro/Funcionarios.tsx(59,29): error TS1005: ',' expected.
+src/pages/financeiro/Funcionarios.tsx(59,30): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(60,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(61,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(64,27): error TS1135: Argument expression expected.
+src/pages/financeiro/Funcionarios.tsx(65,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(65,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(65,10): error TS1005: ';' expected.
+src/pages/financeiro/Funcionarios.tsx(73,55): error TS1005: ',' expected.
+src/pages/financeiro/Funcionarios.tsx(73,56): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(76,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(163,93): error TS1005: ',' expected.
+src/pages/financeiro/Funcionarios.tsx(163,95): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/Funcionarios.tsx(187,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(43,28): error TS1005: ',' expected.
+src/pages/financeiro/Metas.tsx(43,29): error TS1472: 'catch' or 'finally' expected.
+src/pages/financeiro/Metas.tsx(52,11): error TS1005: ',' expected.
+src/pages/financeiro/Metas.tsx(53,59): error TS1005: ',' expected.
+src/pages/financeiro/Metas.tsx(53,60): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(55,11): error TS1005: 'try' expected.
+src/pages/financeiro/Metas.tsx(56,29): error TS1005: ',' expected.
+src/pages/financeiro/Metas.tsx(56,30): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(57,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(58,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(61,20): error TS1135: Argument expression expected.
+src/pages/financeiro/Metas.tsx(62,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(62,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(62,10): error TS1005: ';' expected.
+src/pages/financeiro/Metas.tsx(70,55): error TS1005: ',' expected.
+src/pages/financeiro/Metas.tsx(70,56): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(73,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Metas.tsx(125,95): error TS1005: ',' expected.
+src/pages/financeiro/Metas.tsx(125,97): error TS1005: '}' expected.
+src/pages/financeiro/Metas.tsx(142,59): error TS1005: ',' expected.
+src/pages/financeiro/Metas.tsx(142,61): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/Metas.tsx(175,17): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/Metas.tsx(175,19): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/Metas.tsx(185,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/MetasSemanais.tsx(17,20): error TS1135: Argument expression expected.
+src/pages/financeiro/MetasSemanais.tsx(18,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/MetasSemanais.tsx(18,23): error TS1005: ';' expected.
+src/pages/financeiro/MetasSemanais.tsx(40,32): error TS1005: ',' expected.
+src/pages/financeiro/MetasSemanais.tsx(40,33): error TS1128: Declaration or statement expected.
+src/pages/financeiro/MetasSemanais.tsx(42,11): error TS1005: ',' expected.
+src/pages/financeiro/MetasSemanais.tsx(43,29): error TS1005: ',' expected.
+src/pages/financeiro/MetasSemanais.tsx(43,30): error TS1128: Declaration or statement expected.
+src/pages/financeiro/MetasSemanais.tsx(44,9): error TS1128: Declaration or statement expected.
+src/pages/financeiro/MetasSemanais.tsx(45,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/MetasSemanais.tsx(61,82): error TS1005: ',' expected.
+src/pages/financeiro/MetasSemanais.tsx(61,83): error TS1005: ',' expected.
+src/pages/financeiro/MetasSemanais.tsx(66,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/MetasSemanais.tsx(69,9): error TS2657: JSX expressions must have one parent element.
+src/pages/financeiro/MetasSemanais.tsx(85,71): error TS1135: Argument expression expected.
+src/pages/financeiro/MetasSemanais.tsx(85,72): error TS1003: Identifier expected.
+src/pages/financeiro/MetasSemanais.tsx(85,73): error TS1005: ',' expected.
+src/pages/financeiro/MetasSemanais.tsx(85,74): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/financeiro/MetasSemanais.tsx(87,35): error TS17002: Expected corresponding JSX closing tag for 'SelectContent'.
+src/pages/financeiro/MetasSemanais.tsx(88,31): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/MetasSemanais.tsx(89,27): error TS17002: Expected corresponding JSX closing tag for 'Select'.
+src/pages/financeiro/MetasSemanais.tsx(90,23): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/financeiro/MetasSemanais.tsx(96,62): error TS1005: ',' expected.
+src/pages/financeiro/MetasSemanais.tsx(96,64): error TS1005: '}' expected.
+src/pages/financeiro/MetasSemanais.tsx(116,17): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/MetasSemanais.tsx(116,19): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/MetasSemanais.tsx(132,9): error TS1005: ')' expected.
+src/pages/financeiro/MetasSemanais.tsx(133,5): error TS1109: Expression expected.
+src/pages/financeiro/MetasSemanais.tsx(134,1): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(65,57): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(65,58): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(67,11): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(73,20): error TS1135: Argument expression expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(74,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(74,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(74,22): error TS1005: ';' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(82,55): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(82,56): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(85,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(90,60): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(102,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(102,6): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(154,89): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(154,91): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/financeiro/PlanejamentoEstrategico.tsx(258,1): error TS1128: Declaration or statement expected.
+src/pages/Login.tsx(27,26): error TS1135: Argument expression expected.
+src/pages/Login.tsx(27,27): error TS1005: ',' expected.
+src/pages/Login.tsx(47,26): error TS1135: Argument expression expected.
+src/pages/Login.tsx(47,27): error TS1005: ',' expected.
+src/pages/Login.tsx(72,5): error TS1128: Declaration or statement expected.
+src/pages/Login.tsx(77,26): error TS1135: Argument expression expected.
+src/pages/Login.tsx(77,27): error TS1005: ',' expected.
+src/pages/Login.tsx(103,5): error TS1128: Declaration or statement expected.
+src/pages/Login.tsx(120,59): error TS1135: Argument expression expected.
+src/pages/Login.tsx(120,60): error TS1128: Declaration or statement expected.
+src/pages/Login.tsx(122,21): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(123,17): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(123,18): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(124,13): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Login.tsx(127,15): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/pages/Login.tsx(127,21): error TS1005: ',' expected.
+src/pages/Login.tsx(128,9): error TS1109: Expression expected.
+src/pages/Login.tsx(128,11): error TS1109: Expression expected.
+src/pages/Login.tsx(129,5): error TS1109: Expression expected.
+src/pages/Login.tsx(163,95): error TS1005: ',' expected.
+src/pages/Login.tsx(163,96): error TS1003: Identifier expected.
+src/pages/Login.tsx(163,97): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(166,54): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Login.tsx(197,95): error TS1005: ',' expected.
+src/pages/Login.tsx(197,96): error TS1003: Identifier expected.
+src/pages/Login.tsx(197,97): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(200,54): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Login.tsx(219,101): error TS1005: ',' expected.
+src/pages/Login.tsx(219,102): error TS1003: Identifier expected.
+src/pages/Login.tsx(219,103): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(221,53): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Login.tsx(223,55): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/Login.tsx(225,47): error TS17002: Expected corresponding JSX closing tag for 'form'.
+src/pages/Login.tsx(241,43): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/pages/Login.tsx(241,47): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Login.tsx(242,39): error TS1003: Identifier expected.
+src/pages/Login.tsx(243,34): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(244,31): error TS17002: Expected corresponding JSX closing tag for 'CardContent'.
+src/pages/Login.tsx(259,86): error TS1005: ',' expected.
+src/pages/Login.tsx(259,87): error TS1003: Identifier expected.
+src/pages/Login.tsx(259,88): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(262,46): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Login.tsx(293,87): error TS1005: ',' expected.
+src/pages/Login.tsx(293,88): error TS1003: Identifier expected.
+src/pages/Login.tsx(293,89): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(296,46): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Login.tsx(315,93): error TS1005: ',' expected.
+src/pages/Login.tsx(315,94): error TS1003: Identifier expected.
+src/pages/Login.tsx(315,95): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/Login.tsx(317,45): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Login.tsx(319,47): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/Login.tsx(321,39): error TS17002: Expected corresponding JSX closing tag for 'form'.
+src/pages/Login.tsx(328,35): error TS17002: Expected corresponding JSX closing tag for 'TabsContent'.
+src/pages/Login.tsx(329,31): error TS17002: Expected corresponding JSX closing tag for 'Tabs'.
+src/pages/Login.tsx(330,27): error TS17002: Expected corresponding JSX closing tag for 'Card'.
+src/pages/Login.tsx(331,23): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/Login.tsx(336,19): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/Login.tsx(337,13): error TS1005: ')' expected.
+src/pages/Login.tsx(338,9): error TS1109: Expression expected.
+src/pages/Login.tsx(339,5): error TS1109: Expression expected.
+src/pages/Login.tsx(340,1): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(72,28): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(72,29): error TS1472: 'catch' or 'finally' expected.
+src/pages/loja/CaixaDiario.tsx(81,11): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(82,65): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(82,66): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(84,11): error TS1005: 'try' expected.
+src/pages/loja/CaixaDiario.tsx(85,29): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(85,30): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(86,9): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(87,5): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(90,26): error TS1135: Argument expression expected.
+src/pages/loja/CaixaDiario.tsx(91,5): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(91,6): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(91,19): error TS1005: ';' expected.
+src/pages/loja/CaixaDiario.tsx(99,74): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(99,75): error TS1472: 'catch' or 'finally' expected.
+src/pages/loja/CaixaDiario.tsx(102,11): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(103,55): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(103,56): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(105,9): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(106,5): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(110,33): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(110,34): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(121,11): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(122,25): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(122,30): error TS1005: ')' expected.
+src/pages/loja/CaixaDiario.tsx(122,31): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(133,9): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(135,5): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(140,88): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(140,89): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(184,51): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(184,52): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(186,9): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(187,5): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(197,52): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(197,53): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(200,5): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(210,9): error TS2657: JSX expressions must have one parent element.
+src/pages/loja/CaixaDiario.tsx(227,60): error TS1135: Argument expression expected.
+src/pages/loja/CaixaDiario.tsx(227,61): error TS1003: Identifier expected.
+src/pages/loja/CaixaDiario.tsx(227,62): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/loja/CaixaDiario.tsx(227,63): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/loja/CaixaDiario.tsx(229,23): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/loja/CaixaDiario.tsx(333,86): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(333,87): error TS1003: Identifier expected.
+src/pages/loja/CaixaDiario.tsx(333,88): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/loja/CaixaDiario.tsx(333,89): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/loja/CaixaDiario.tsx(333,100): error TS17002: Expected corresponding JSX closing tag for 'DialogFooter'.
+src/pages/loja/CaixaDiario.tsx(335,23): error TS17002: Expected corresponding JSX closing tag for 'DialogContent'.
+src/pages/loja/CaixaDiario.tsx(336,19): error TS17002: Expected corresponding JSX closing tag for 'Dialog'.
+src/pages/loja/CaixaDiario.tsx(337,13): error TS1005: ')' expected.
+src/pages/loja/CaixaDiario.tsx(355,113): error TS1005: ')' expected.
+src/pages/loja/CaixaDiario.tsx(355,115): error TS1005: '}' expected.
+src/pages/loja/CaixaDiario.tsx(378,29): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/loja/CaixaDiario.tsx(378,31): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/loja/CaixaDiario.tsx(391,9): error TS1128: Declaration or statement expected.
+src/pages/loja/CaixaDiario.tsx(392,5): error TS1109: Expression expected.
+src/pages/loja/CaixaDiario.tsx(393,1): error TS1128: Declaration or statement expected.
+src/pages/loja/LojaDashboard.tsx(22,110): error TS1135: Argument expression expected.
+src/pages/loja/LojaDashboard.tsx(22,111): error TS1005: ',' expected.
+src/pages/loja/LojaDashboard.tsx(55,5): error TS1128: Declaration or statement expected.
+src/pages/loja/LojaDashboard.tsx(55,6): error TS1128: Declaration or statement expected.
+src/pages/loja/LojaDashboard.tsx(55,10): error TS1005: ';' expected.
+src/pages/loja/LojaDashboard.tsx(95,58): error TS1005: ',' expected.
+src/pages/loja/LojaDashboard.tsx(95,60): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/loja/LojaDashboard.tsx(133,1): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(53,20): error TS1135: Argument expression expected.
+src/pages/rh/CampanhasVendas.tsx(55,4): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(55,15): error TS1005: ';' expected.
+src/pages/rh/CampanhasVendas.tsx(68,6): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(68,7): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(71,3): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(82,35): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(82,36): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(82,47): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(105,3): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(105,4): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(105,36): error TS1005: ';' expected.
+src/pages/rh/CampanhasVendas.tsx(109,31): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(109,32): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(111,7): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(112,26): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(112,38): error TS1005: ')' expected.
+src/pages/rh/CampanhasVendas.tsx(112,39): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(114,5): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(115,3): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(151,19): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(151,20): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(157,3): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(177,75): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(177,76): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(177,111): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(178,79): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(178,80): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(178,115): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(219,45): error TS1135: Argument expression expected.
+src/pages/rh/CampanhasVendas.tsx(219,46): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(221,7): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(222,13): error TS1005: ':' expected.
+src/pages/rh/CampanhasVendas.tsx(222,36): error TS1135: Argument expression expected.
+src/pages/rh/CampanhasVendas.tsx(222,37): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(224,5): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(230,73): error TS1135: Argument expression expected.
+src/pages/rh/CampanhasVendas.tsx(230,74): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(239,5): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(243,3): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(280,75): error TS1135: Argument expression expected.
+src/pages/rh/CampanhasVendas.tsx(280,76): error TS1003: Identifier expected.
+src/pages/rh/CampanhasVendas.tsx(280,77): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/CampanhasVendas.tsx(280,96): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/rh/CampanhasVendas.tsx(282,13): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/rh/CampanhasVendas.tsx(284,73): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(284,74): error TS1005: '}' expected.
+src/pages/rh/CampanhasVendas.tsx(284,98): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/CampanhasVendas.tsx(284,99): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/CampanhasVendas.tsx(284,100): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/rh/CampanhasVendas.tsx(327,13): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/rh/CampanhasVendas.tsx(329,7): error TS1005: ')' expected.
+src/pages/rh/CampanhasVendas.tsx(332,13): error TS1005: ';' expected.
+src/pages/rh/CampanhasVendas.tsx(344,7): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(365,98): error TS1005: ',' expected.
+src/pages/rh/CampanhasVendas.tsx(365,100): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/CampanhasVendas.tsx(459,13): error TS1005: ')' expected.
+src/pages/rh/CampanhasVendas.tsx(459,15): error TS1005: '}' expected.
+src/pages/rh/CampanhasVendas.tsx(460,11): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/CampanhasVendas.tsx(460,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/CampanhasVendas.tsx(466,5): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(467,3): error TS1109: Expression expected.
+src/pages/rh/CampanhasVendas.tsx(467,4): error TS1128: Declaration or statement expected.
+src/pages/rh/CampanhasVendas.tsx(468,1): error TS1128: Declaration or statement expected.
+src/pages/rh/FolhaPagamento.tsx(30,54): error TS1005: ',' expected.
+src/pages/rh/FolhaPagamento.tsx(33,4): error TS1128: Declaration or statement expected.
+src/pages/rh/FolhaPagamento.tsx(33,15): error TS1005: ';' expected.
+src/pages/rh/FolhaPagamento.tsx(36,78): error TS1005: ',' expected.
+src/pages/rh/FolhaPagamento.tsx(47,3): error TS1128: Declaration or statement expected.
+src/pages/rh/FolhaPagamento.tsx(47,4): error TS1128: Declaration or statement expected.
+src/pages/rh/FolhaPagamento.tsx(47,20): error TS1005: ';' expected.
+src/pages/rh/FolhaPagamento.tsx(76,116): error TS1135: Argument expression expected.
+src/pages/rh/FolhaPagamento.tsx(76,118): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/FolhaPagamento.tsx(213,1): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(45,52): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(47,4): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(47,15): error TS1005: ';' expected.
+src/pages/rh/Funcionarios.tsx(53,34): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(53,35): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(65,3): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(103,19): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(103,20): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(110,3): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(113,67): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(113,68): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(113,69): error TS1134: Variable declaration expected.
+src/pages/rh/Funcionarios.tsx(113,72): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(116,3): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(155,81): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(155,82): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(155,117): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(156,85): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(156,86): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(156,121): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(163,45): error TS1135: Argument expression expected.
+src/pages/rh/Funcionarios.tsx(163,46): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(165,7): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(166,13): error TS1005: ':' expected.
+src/pages/rh/Funcionarios.tsx(166,36): error TS1135: Argument expression expected.
+src/pages/rh/Funcionarios.tsx(166,37): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(168,5): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(175,97): error TS1135: Argument expression expected.
+src/pages/rh/Funcionarios.tsx(175,98): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(187,5): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(191,3): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(216,75): error TS1135: Argument expression expected.
+src/pages/rh/Funcionarios.tsx(216,76): error TS1003: Identifier expected.
+src/pages/rh/Funcionarios.tsx(216,77): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/Funcionarios.tsx(216,96): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/rh/Funcionarios.tsx(218,13): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/rh/Funcionarios.tsx(252,73): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(252,74): error TS1005: '}' expected.
+src/pages/rh/Funcionarios.tsx(252,98): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/Funcionarios.tsx(252,99): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/Funcionarios.tsx(252,100): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/rh/Funcionarios.tsx(309,13): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/rh/Funcionarios.tsx(311,7): error TS1005: ')' expected.
+src/pages/rh/Funcionarios.tsx(339,7): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(363,78): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(363,80): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/Funcionarios.tsx(371,96): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(371,97): error TS1005: '}' expected.
+src/pages/rh/Funcionarios.tsx(371,128): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/Funcionarios.tsx(371,129): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/Funcionarios.tsx(371,156): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/rh/Funcionarios.tsx(373,25): error TS17002: Expected corresponding JSX closing tag for 'div'.
+src/pages/rh/Funcionarios.tsx(375,93): error TS1005: ',' expected.
+src/pages/rh/Funcionarios.tsx(375,94): error TS1003: Identifier expected.
+src/pages/rh/Funcionarios.tsx(375,164): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/rh/Funcionarios.tsx(377,27): error TS17002: Expected corresponding JSX closing tag for 'TableCell'.
+src/pages/rh/Funcionarios.tsx(378,24): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/Funcionarios.tsx(379,23): error TS17002: Expected corresponding JSX closing tag for 'TableRow'.
+src/pages/rh/Funcionarios.tsx(380,19): error TS1005: ')' expected.
+src/pages/rh/Funcionarios.tsx(380,21): error TS17002: Expected corresponding JSX closing tag for 'TableBody'.
+src/pages/rh/Funcionarios.tsx(381,19): error TS17002: Expected corresponding JSX closing tag for 'Table'.
+src/pages/rh/Funcionarios.tsx(382,17): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/pages/rh/Funcionarios.tsx(386,15): error TS17002: Expected corresponding JSX closing tag for 'CardContent'.
+src/pages/rh/Funcionarios.tsx(387,11): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(388,9): error TS1109: Expression expected.
+src/pages/rh/Funcionarios.tsx(389,7): error TS1109: Expression expected.
+src/pages/rh/Funcionarios.tsx(390,5): error TS1109: Expression expected.
+src/pages/rh/Funcionarios.tsx(391,3): error TS1109: Expression expected.
+src/pages/rh/Funcionarios.tsx(391,4): error TS1128: Declaration or statement expected.
+src/pages/rh/Funcionarios.tsx(392,1): error TS1128: Declaration or statement expected.

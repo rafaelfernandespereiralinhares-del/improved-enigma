@@ -1,0 +1,86 @@
+src/components/FileImport.tsx(32,13): error TS1136: Property assignment expected.
+src/components/FileImport.tsx(43,13): error TS1005: ',' expected.
+src/components/ui/badge.tsx(32,52): error TS1005: ',' expected.
+src/components/ui/button.tsx(47,73): error TS1005: ',' expected.
+src/components/ui/calendar.tsx(27,57): error TS1005: ',' expected.
+src/components/ui/calendar.tsx(39,55): error TS1005: ',' expected.
+src/components/ui/month-year-picker.tsx(49,75): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceForm.tsx(37,5): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceForm.tsx(58,13): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceForm.tsx(65,13): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceForm.tsx(93,147): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceForm.tsx(108,163): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceList.tsx(15,92): error TS1005: ';' expected.
+src/features/maintenance/components/MaintenanceList.tsx(45,120): error TS1005: ',' expected.
+src/features/maintenance/components/MaintenanceList.tsx(48,122): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(37,5): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(58,13): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(65,13): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(93,147): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceForm.tsx(108,163): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(15,92): error TS1005: ';' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(45,120): error TS1005: ',' expected.
+src/features/maintenance/maintenance/components/MaintenanceList.tsx(48,122): error TS1005: ',' expected.
+src/features/maintenance/maintenance/MaintenancePage.tsx(50,120): error TS1005: ',' expected.
+src/features/maintenance/MaintenancePage.tsx(50,120): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(23,66): error TS1005: ';' expected.
+src/hooks/useAuth.tsx(80,68): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(87,9): error TS1128: Declaration or statement expected.
+src/hooks/useAuth.tsx(96,84): error TS1005: ',' expected.
+src/hooks/useAuth.tsx(108,9): error TS1136: Property assignment expected.
+src/pages/admin/AdminDashboard.tsx(24,5): error TS1005: ',' expected.
+src/pages/admin/AdminDashboard.tsx(46,13): error TS1005: ',' expected.
+src/pages/admin/AdminEmpresas.tsx(109,49): error TS1005: ',' expected.
+src/pages/admin/AdminLojas.tsx(146,49): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(85,5): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(125,13): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(131,104): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(145,49): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(203,104): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(212,105): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(221,108): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(229,96): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(246,115): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(260,99): error TS1005: ',' expected.
+src/pages/admin/AdminUsuarios.tsx(369,25): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(64,5): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(65,79): error TS1005: ',' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(75,5): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(99,5): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(110,5): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(119,5): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(123,5): error TS1136: Property assignment expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(130,5): error TS1128: Declaration or statement expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(139,85): error TS1005: ',' expected.
+src/pages/diretoria/DiretoriaDashboard.tsx(152,3): error TS1128: Declaration or statement expected.
+src/pages/financeiro/Funcionarios.tsx(82,9): error TS1005: ',' expected.
+src/pages/financeiro/Funcionarios.tsx(143,96): error TS1005: '}' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(97,70): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(102,5): error TS1128: Declaration or statement expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(222,61): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(232,61): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(238,61): error TS1005: ',' expected.
+src/pages/financeiro/PlanejamentoEstrategico.tsx(244,61): error TS1005: ',' expected.
+src/pages/Index.tsx(11,60): error TS1005: ',' expected.
+src/pages/Index.tsx(13,72): error TS1005: ',' expected.
+src/pages/Index.tsx(14,80): error TS1005: ',' expected.
+src/pages/Index.tsx(15,84): error TS1005: ',' expected.
+src/pages/Index.tsx(16,70): error TS1005: ',' expected.
+src/pages/Index.tsx(17,57): error TS1005: ',' expected.
+src/pages/Login.tsx(70,9): error TS1136: Property assignment expected.
+src/pages/loja/CaixaDiario.tsx(64,5): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(120,13): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(132,13): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(206,9): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(252,106): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(259,102): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(269,111): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(280,106): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(288,101): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(296,104): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(307,104): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(316,109): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(325,106): error TS1005: ',' expected.
+src/pages/loja/CaixaDiario.tsx(378,29): error TS1128: Declaration or statement expected.
+src/pages/loja/LojaDashboard.tsx(17,5): error TS1005: ',' expected.
+src/pages/loja/LojaDashboard.tsx(51,13): error TS1005: ',' expected.

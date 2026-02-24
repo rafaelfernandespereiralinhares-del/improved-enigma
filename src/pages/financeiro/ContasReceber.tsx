@@ -1,297 +1,332 @@
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { MonthYearPicker } from "@/components/ui/month-year-picker";
-import { DataImportButton } from "@/components/DataImportButton";
-import { Separator } from "@/components/ui/separator";
-import { importService } from "@/services/importService";
-import { supabase } from "@/lib/supabase";
-import { Button } from "@/components/ui/button";
-import { Plus, Trash2, CalendarIcon, CheckCircle, AlertCircle, ArrowUpCircle } from "lucide-react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { format } from "date-fns";
-import { ptBR } from "date-fns/locale";
-import { toast } from "sonner";
-import { Badge } from "@/components/ui/badge";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { cn } from "@/lib/utils";
+import { useEffect, useState, useRef } from 'react';
+import { supabase } from '@/lib/supabase';
+import { useAuth } from '@/hooks/useAuth';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { useToast } from '@/hooks/use-toast';
+import { Plus, Download, Upload, Pencil, Trash2 } from 'lucide-react';
+import { validateOrError, contaReceberSchema } from '@/lib/validation';
+import { exportToCSV, exportToExcel, parseCSV, parseExcel } from '@/lib/csv';
+
+interface Loja { id: string; nome: string; }
 
 export default function ContasReceber() {
-    const { profile } = useAuth();
-    const [date, setDate] = useState<Date>(new Date());
-    const [data, setData] = useState<any[]>([]);
-    const [loading, setLoading] = useState(false);
+  const isAdmin = useAuth().hasRole('ADMIN');
+  const { profile } = useAuth();
+  const { toast } = useToast();
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [lojas, setLojas] = useState<Loja[]>([]);
+  const [contas, setContas] = useState<any[]>([]);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [form, setForm] = useState({ loja_id: '', cliente: '', valor: '', vencimento: '', status: 'ABERTO', etapa_cobranca: 'D1' });
+  const [editingId, setEditingId] = useState<string | null>(null);
 
-    // Modal state
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [newItem, setNewItem] = useState({
-        cliente: "",
-        valor: "",
-        vencimento: new Date(),
-        status: "Pendente"
+  const openNewDialog = () => {
+    setEditingId(null);
+    setForm({ loja_id: '', cliente: '', valor: '', vencimento: '', status: 'ABERTO', etapa_cobranca: 'D1' });
+    setDialogOpen(true);
+  };
+
+  const handleEdit = (conta: any) => {
+    setEditingId(conta.id);
+    setForm({
+      loja_id: conta.loja_id || '',
+      cliente: conta.cliente,
+      valor: conta.valor.toString(),
+      vencimento: conta.vencimento,
+      status: conta.status,
+      etapa_cobranca: conta.etapa_cobranca || 'D1'
     });
+    setDialogOpen(true);
+  };
 
-    const empresaId = profile?.empresa_id;
-    const lojaId = profile?.loja_id;
+  const handleDelete = async (id: string) => {
+    if (!confirm('Tem certeza que deseja excluir esta conta?')) return;
+    const { error } = await supabase.from('contas_receber').delete().eq('id', id);
+    if (error) { toast({ title: 'Erro ao excluir', description: error.message, variant: 'destructive' }); return; }
+    toast({ title: 'Conta excluída com sucesso!' });
+    fetchContas();
+  };
 
-    useEffect(() => {
-        if (empresaId) {
-            fetchData();
-        }
-    }, [date, empresaId]);
+  useEffect(() => {
+    if (!profile?.empresa_id) return;
+    supabase.from('lojas').select('id, nome').eq('empresa_id', profile.empresa_id).eq('ativa', true)
+      .then(({ data }) => { if (data) setLojas(data); });
+    fetchContas();
+  }, [profile]);
 
-    const fetchData = async () => {
-        if (!empresaId) return;
-        setLoading(true);
-        const startOfMonth = new Date(date.getFullYear(), date.getMonth(), 1).toISOString();
-        const endOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).toISOString();
+  const fetchContas = async () => {
+    if (!profile?.empresa_id) return;
+    const { data } = await supabase.from('contas_receber').select('*').eq('empresa_id', profile.empresa_id).order('vencimento', { ascending: true });
+    if (data) setContas(data);
+  };
 
-        const { data: accounts, error } = await supabase
-            .from('contas_receber')
-            .select('*')
-            .gte('vencimento', startOfMonth)
-            .lte('vencimento', endOfMonth)
-            .order('vencimento', { ascending: true });
+  const handleSave = async () => {
+    if (!profile?.empresa_id) return;
+    const v = validateOrError(contaReceberSchema, { loja_id: form.loja_id, cliente: form.cliente, valor: parseFloat(form.valor), vencimento: form.vencimento });
+    if (v) { toast({ title: 'Validação', description: v, variant: 'destructive' }); return; }
+    if (editingId) {
+      const { error } = await supabase.from('contas_receber').update({
+        loja_id: form.loja_id,
+        cliente: form.cliente,
+        valor: parseFloat(form.valor),
+        vencimento: form.vencimento,
+        status: form.status as any,
+        etapa_cobranca: form.etapa_cobranca as any,
+      }).eq('id', editingId);
 
-        if (error) {
-            console.error(error);
-            toast.error("Erro ao carregar contas");
-        } else {
-            setData(accounts || []);
-        }
-        setLoading(false);
-    };
+      if (error) {
+        toast({ title: 'Erro', description: error.message, variant: 'destructive' });
+      } else {
+        toast({ title: 'Conta atualizada!' });
+        setDialogOpen(false);
+        setEditingId(null);
+        setForm({ loja_id: '', cliente: '', valor: '', vencimento: '', status: 'ABERTO', etapa_cobranca: 'D1' });
+        fetchContas();
+      }
+    } else {
+      const { error } = await supabase.from('contas_receber').insert({
+        empresa_id: profile.empresa_id,
+        loja_id: form.loja_id,
+        cliente: form.cliente,
+        valor: parseFloat(form.valor),
+        vencimento: form.vencimento,
+        status: form.status as any,
+        etapa_cobranca: form.etapa_cobranca as any,
+      });
 
-    const handleImport = async (importedData: any[]) => {
-        if (!empresaId || !lojaId) {
-            toast.error("Erro: Identificação da empresa faltando.");
-            return;
-        }
-        try {
-            await importService.importContasReceber(importedData, empresaId, lojaId);
-            toast.success("Importação realizada com sucesso!");
-            fetchData();
-        } catch (error) {
-            toast.error("Erro na importação.");
-        }
-    };
+      if (error) {
+        toast({ title: 'Erro', description: error.message, variant: 'destructive' });
+      } else {
+        toast({ title: 'Conta registrada!' });
+        setDialogOpen(false);
+        setEditingId(null);
+        setForm({ loja_id: '', cliente: '', valor: '', vencimento: '', status: 'ABERTO', etapa_cobranca: 'D1' });
+        fetchContas();
+      }
+    }
+  };
 
-    const handleSave = async () => {
-        if (!empresaId || !lojaId) {
-            toast.error("Erro: Identificação da empresa faltando.");
-            return;
-        }
-        if (!newItem.cliente || !newItem.valor) {
-            toast.error("Preencha cliente e valor.");
-            return;
-        }
+  const updateStatus = async (id: string, status: string) => {
+    await supabase.from('contas_receber').update({
+      status: status as any,
+      data_pagamento: status === 'PAGO' ? new Date().toISOString().slice(0, 10) : null,
+    }).eq('id', id);
+    fetchContas();
+  };
 
-        try {
-            const { error } = await supabase.from('contas_receber').insert({
-                cliente: newItem.cliente,
-                valor: parseFloat(newItem.valor.replace(',', '.')),
-                vencimento: newItem.vencimento.toISOString(),
-                status: newItem.status as any,
-                empresa_id: empresaId,
-                loja_id: lojaId
-            } as any);
+  const handleExport = () => {
+    const data = contas.map(c => ({
+      cliente: c.cliente,
+      loja: lojas.find(l => l.id === c.loja_id)?.nome ?? '-',
+      valor: Number(c.valor).toFixed(2),
+      vencimento: new Date(c.vencimento).toLocaleDateString('pt-BR'),
+      etapa: c.etapa_cobranca,
+      status: c.status,
+    }));
+    const cols = [
+      { key: 'cliente', label: 'Cliente' },
+      { key: 'loja', label: 'Loja' },
+      { key: 'valor', label: 'Valor' },
+      { key: 'vencimento', label: 'Vencimento' },
+      { key: 'etapa', label: 'Etapa Cobrança' },
+      { key: 'status', label: 'Status' },
+    ];
+    exportToCSV(data, 'contas_receber', cols);
+    toast({ title: 'Exportado!' });
+  };
 
-            if (error) throw error;
+  const handleExportExcel = () => {
+    const data = contas.map(c => ({
+      cliente: c.cliente,
+      loja: lojas.find(l => l.id === c.loja_id)?.nome ?? '-',
+      valor: Number(c.valor).toFixed(2),
+      vencimento: new Date(c.vencimento).toLocaleDateString('pt-BR'),
+      etapa: c.etapa_cobranca,
+      status: c.status,
+    }));
+    const cols = [
+      { key: 'cliente', label: 'Cliente' },
+      { key: 'loja', label: 'Loja' },
+      { key: 'valor', label: 'Valor' },
+      { key: 'vencimento', label: 'Vencimento' },
+      { key: 'etapa', label: 'Etapa Cobrança' },
+      { key: 'status', label: 'Status' },
+    ];
+    exportToExcel(data, 'contas_receber', cols);
+    toast({ title: 'Exportado!' });
+  };
 
-            toast.success("Lançamento salvo!");
-            setIsModalOpen(false);
-            setNewItem({ cliente: "", valor: "", vencimento: new Date(), status: "Pendente" }); // Reset
-            fetchData();
-        } catch (error) {
-            console.error(error);
-            toast.error("Erro ao salvar lançamento.");
-        }
-    };
+  const handleImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !profile?.empresa_id) return;
+    let rows: Record<string, string>[];
+    if (file.name.endsWith('.xlsx') || file.name.endsWith('.xls')) {
+      const buffer = await file.arrayBuffer();
+      ({ rows } = parseExcel(buffer));
+    } else {
+      const text = await file.text();
+      ({ rows } = parseCSV(text));
+    }
+    if (rows.length === 0) {
+      toast({ title: 'Erro', description: 'Arquivo vazio ou inválido', variant: 'destructive' });
+      return;
+    }
+    let imported = 0;
+    for (const row of rows) {
+      const cliente = row['Cliente'] || row['cliente'];
+      const lojaNome = row['Loja'] || row['loja'];
+      const valor = parseFloat((row['Valor'] || row['valor'] || '0').replace(',', '.'));
+      const vencimento = row['Vencimento'] || row['vencimento'];
+      const loja = lojas.find(l => l.nome.toLowerCase() === lojaNome?.toLowerCase());
+      if (!cliente || !loja || !valor || !vencimento) continue;
+      let dataISO = vencimento;
+      if (vencimento.includes('/')) {
+        const parts = vencimento.split('/');
+        if (parts.length === 3) dataISO = `${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
+      }
+      const { error } = await supabase.from('contas_receber').insert({
+        empresa_id: profile.empresa_id,
+        loja_id: loja.id,
+        cliente,
+        valor,
+        vencimento: dataISO,
+      });
+      if (!error) imported++;
+    }
+    toast({ title: `${imported} contas importadas de ${rows.length}` });
+    if (fileRef.current) fileRef.current.value = '';
+    fetchContas();
+  };
 
-    const handleDelete = async (id: string) => {
-        try {
-            const { error } = await supabase.from('contas_receber').delete().eq('id', id);
-            if (error) throw error;
-            toast.success("Item excluído.");
-            fetchData();
-        } catch (error) {
-            toast.error("Erro ao excluir.");
-        }
-    };
+  const statusBadge = (s: string) => {
+    if (s === 'PAGO') return <Badge className="bg-success text-success-foreground">Pago</Badge>;
+    if (s === 'ATRASADO') return <Badge className="bg-danger text-danger-foreground">Atrasado</Badge>;
+    if (s === 'NEGOCIADO') return <Badge className="bg-warning text-warning-foreground">Negociado</Badge>;
+    return <Badge variant="secondary">Aberto</Badge>;
+  };
 
-    return (
-        <div className="container mx-auto p-6 space-y-8">
-            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div>
-                    <h1 className="text-3xl font-bold tracking-tight text-primary">Contas a Receber</h1>
-                    <p className="text-muted-foreground">Gestão de receitas e recebimentos</p>
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="font-display text-2xl font-bold">Contas a Receber</h1>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={handleExport} className="gap-2" disabled={contas.length === 0}>
+            <Download className="h-4 w-4" /> CSV
+          </Button>
+          <Button variant="outline" onClick={handleExportExcel} className="gap-2" disabled={contas.length === 0}>
+            <Download className="h-4 w-4" /> Excel
+          </Button>
+          <Button variant="outline" onClick={() => fileRef.current?.click()} className="gap-2">
+            <Upload className="h-4 w-4" /> Importar
+          </Button>
+          <input type="file" accept=".csv,.xlsx,.xls" ref={fileRef} onChange={handleImport} className="hidden" />
+          <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+            <DialogTrigger asChild><Button className="gap-2" onClick={openNewDialog}><Plus className="h-4 w-4" /> Nova Conta</Button></DialogTrigger>
+            <DialogContent>
+              <DialogHeader><DialogTitle>{editingId ? "Editar Conta a Receber" : "Nova Conta a Receber"}</DialogTitle></DialogHeader>
+              <div className="space-y-4">
+                <div className="space-y-1.5">
+                  <Label>Loja</Label>
+                  <Select value={form.loja_id} onValueChange={v => setForm(p => ({ ...p, loja_id: v }))}>
+                    <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
+                    <SelectContent>{lojas.map(l => <SelectItem key={l.id} value={l.id}>{l.nome}</SelectItem>)}</SelectContent>
+                  </Select>
                 </div>
-                <div className="flex items-center gap-2">
-                    <MonthYearPicker date={date} setDate={setDate} />
-                    <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-                        <DialogTrigger asChild>
-                            <Button className="bg-green-600 hover:bg-green-700">
-                                <Plus className="mr-2 h-4 w-4" /> Novo Lançamento
-                            </Button>
-                        </DialogTrigger>
-                        <DialogContent>
-                            <DialogHeader>
-                                <DialogTitle>Novo Contas a Receber</DialogTitle>
-                                <DialogDescription>Adicione uma nova receita manualmente.</DialogDescription>
-                            </DialogHeader>
-                            <div className="grid gap-4 py-4">
-                                <div className="grid gap-2">
-                                    <Label>Cliente / Origem</Label>
-                                    <Input
-                                        value={newItem.cliente}
-                                        onChange={(e) => setNewItem({ ...newItem, cliente: e.target.value })}
-                                        placeholder="Ex: Cliente A, Venda Balcão..."
-                                    />
-                                </div>
-                                <div className="grid gap-2">
-                                    <Label>Valor (R$)</Label>
-                                    <Input
-                                        type="number"
-                                        value={newItem.valor}
-                                        onChange={(e) => setNewItem({ ...newItem, valor: e.target.value })}
-                                        placeholder="0.00"
-                                    />
-                                </div>
-                                <div className="grid gap-2">
-                                    <Label>Vencimento</Label>
-                                    <Popover>
-                                        <PopoverTrigger asChild>
-                                            <Button
-                                                variant={"outline"}
-                                                className={cn(
-                                                    "w-full justify-start text-left font-normal",
-                                                    !newItem.vencimento && "text-muted-foreground"
-                                                )}
-                                            >
-                                                <CalendarIcon className="mr-2 h-4 w-4" />
-                                                {newItem.vencimento ? format(newItem.vencimento, "PPP", { locale: ptBR }) : <span>Selecione uma data</span>}
-                                            </Button>
-                                        </PopoverTrigger>
-                                        <PopoverContent className="w-auto p-0">
-                                            <Calendar
-                                                mode="single"
-                                                selected={newItem.vencimento}
-                                                onSelect={(d: Date | undefined) => d && setNewItem({ ...newItem, vencimento: d })}
-                                                initialFocus
-                                            />
-                                        </PopoverContent>
-                                    </Popover>
-                                </div>
-                                <div className="grid gap-2">
-                                    <Label>Status</Label>
-                                    <Select
-                                        value={newItem.status}
-                                        onValueChange={(v) => setNewItem({ ...newItem, status: v })}
-                                    >
-                                        <SelectTrigger>
-                                            <SelectValue />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="Pendente">Pendente</SelectItem>
-                                            <SelectItem value="Recebido">Recebido</SelectItem>
-                                            <SelectItem value="Atrasado">Atrasado</SelectItem>
-                                        </SelectContent>
-                                    </Select>
-                                </div>
-                            </div>
-                            <DialogFooter>
-                                <Button variant="outline" onClick={() => setIsModalOpen(false)}>Cancelar</Button>
-                                <Button className="bg-green-600 hover:bg-green-700" onClick={handleSave}>Salvar</Button>
-                            </DialogFooter>
-                        </DialogContent>
-                    </Dialog>
-                    <DataImportButton onImport={handleImport} label="Contas a Receber" />
+                <div className="space-y-1.5">
+                  <Label>Cliente</Label>
+                  <Input value={form.cliente} onChange={e => setForm(p => ({ ...p, cliente: e.target.value }))} />
                 </div>
-            </div>
-
-            <Separator className="my-4" />
-
-            {/* Stats Cards */}
-            <div className="grid gap-4 md:grid-cols-3">
-                <div className="rounded-xl border bg-card text-card-foreground shadow p-6">
-                    <div className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <div className="text-sm font-medium">Total a Receber</div>
-                        <ArrowUpCircle className="h-4 w-4 text-muted-foreground" />
-                    </div>
-                    <div className="text-2xl font-bold">
-                        R$ {data.reduce((acc, curr) => acc + Number(curr.valor), 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-                    </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <Label>Valor</Label>
+                    <Input type="number" step="0.01" value={form.valor} onChange={e => setForm(p => ({ ...p, valor: e.target.value }))} />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label>Vencimento</Label>
+                    <Input type="date" value={form.vencimento} onChange={e => setForm(p => ({ ...p, vencimento: e.target.value }))} />
+                  </div>
                 </div>
-                <div className="rounded-xl border bg-card text-card-foreground shadow p-6">
-                    <div className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <div className="text-sm font-medium">Recebido</div>
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                    </div>
-                    <div className="text-2xl font-bold text-green-500">
-                        R$ {data.filter(i => i.status === 'Recebido').reduce((acc, curr) => acc + Number(curr.valor), 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-                    </div>
+                <div className="space-y-1.5">
+                  <Label>Etapa de Cobrança</Label>
+                  <Select value={form.etapa_cobranca} onValueChange={v => setForm(p => ({ ...p, etapa_cobranca: v }))}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      {['D1', 'D7', 'D15', 'D30', 'JURIDICO'].map(e => <SelectItem key={e} value={e}>{e}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
                 </div>
-                <div className="rounded-xl border bg-card text-card-foreground shadow p-6">
-                    <div className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <div className="text-sm font-medium">Pendente</div>
-                        <AlertCircle className="h-4 w-4 text-orange-500" />
-                    </div>
-                    <div className="text-2xl font-bold text-orange-500">
-                        R$ {data.filter(i => i.status === 'Pendente').reduce((acc, curr) => acc + Number(curr.valor), 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-                    </div>
-                </div>
-            </div>
-
-            <div className="rounded-md border">
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead>Vencimento</TableHead>
-                            <TableHead>Cliente</TableHead>
-                            <TableHead>Status</TableHead>
-                            <TableHead className="text-right">Valor</TableHead>
-                            <TableHead className="w-[100px]"></TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {loading ? (
-                            <TableRow>
-                                <TableCell colSpan={5} className="text-center py-8">Carregando...</TableCell>
-                            </TableRow>
-                        ) : data.length === 0 ? (
-                            <TableRow>
-                                <TableCell colSpan={5} className="text-center py-8 text-muted-foreground">
-                                    Nenhuma receita encontrada para este mês.
-                                </TableCell>
-                            </TableRow>
-                        ) : (
-                            data.map((item) => (
-                                <TableRow key={item.id}>
-                                    <TableCell>{format(new Date(item.vencimento), "dd/MM/yyyy")}</TableCell>
-                                    <TableCell className="font-medium">{item.cliente}</TableCell>
-                                    <TableCell>
-                                        <Badge variant={item.status === 'Recebido' ? 'default' : item.status === 'Atrasado' ? 'destructive' : 'secondary'} className={item.status === 'Recebido' ? 'bg-green-600' : ''}>
-                                            {item.status}
-                                        </Badge>
-                                    </TableCell>
-                                    <TableCell className="text-right">
-                                        R$ {Number(item.valor).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-                                    </TableCell>
-                                    <TableCell>
-                                        <Button variant="ghost" size="icon" onClick={() => handleDelete(item.id)}>
-                                            <Trash2 className="h-4 w-4 text-destructive" />
-                                        </Button>
-                                    </TableCell>
-                                </TableRow>
-                            ))
-                        )}
-                    </TableBody>
-                </Table>
-            </div>
+                <Button onClick={handleSave} className="w-full">Salvar</Button>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
-    );
+      </div>
+
+      <Card>
+        <CardContent className="pt-6">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Cliente</TableHead>
+                <TableHead>Loja</TableHead>
+                <TableHead className="text-right">Valor</TableHead>
+                <TableHead>Vencimento</TableHead>
+                <TableHead>Etapa</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead></TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {contas.map(c => (
+                <TableRow key={c.id}>
+                  <TableCell className="font-medium">{c.cliente}</TableCell>
+                  <TableCell>{lojas.find(l => l.id === c.loja_id)?.nome ?? '-'}</TableCell>
+                  <TableCell className="text-right">R$ {Number(c.valor).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</TableCell>
+                  <TableCell>{new Date(c.vencimento).toLocaleDateString('pt-BR')}</TableCell>
+                  <TableCell><Badge variant="outline">{c.etapa_cobranca}</Badge></TableCell>
+                  <TableCell>{statusBadge(c.status)}</TableCell>
+                  <TableCell>
+                    <div className="flex items-center justify-end gap-2">
+                      {isAdmin ? (
+                        <Select value={c.status} onValueChange={v => updateStatus(c.id, v)}>
+                          <SelectTrigger className="w-[140px]"><SelectValue /></SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="ABERTO">Aberto</SelectItem>
+                            <SelectItem value="PAGO">Pago</SelectItem>
+                            <SelectItem value="ATRASADO">Atrasado</SelectItem>
+                            <SelectItem value="NEGOCIADO">Negociado</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      ) : c.status !== 'PAGO' ? (
+                        <Button variant="ghost" size="sm" onClick={() => updateStatus(c.id, 'PAGO')}>Marcar Pago</Button>
+                      ) : null}
+
+                      <Button variant="ghost" size="icon" onClick={() => handleEdit(c)}>
+                        <Pencil className="h-4 w-4 text-muted-foreground" />
+                      </Button>
+                      {isAdmin && (
+                        <Button variant="ghost" size="icon" onClick={() => handleDelete(c.id)}>
+                          <Trash2 className="h-4 w-4 text-destructive" />
+                        </Button>
+                      )}
+                    </div>
+                  </TableCell>
+                </TableRow>
+              ))}
+              {contas.length === 0 && (
+                <TableRow><TableCell colSpan={7} className="text-center text-muted-foreground">Nenhuma conta registrada</TableCell></TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </CardContent>
+      </Card>
+    </div>
+  );
 }
